@@ -1,0 +1,42 @@
+[package]
+name = "llm-from-scratch"
+version = "0.1.0"
+edition = "2021"
+description = "A from-scratch implementation of neural networks and language models in Rust"
+license = "MIT"
+authors = ["Lokesh Kumar <lkumar94@gmail.com>"]
+
+[features]
+# Enable GPU acceleration (if available)
+gpu = ["candle-core/cuda"]
+
+[dependencies]
+# Core numerical computing
+ndarray = { version = "0.15", features = ["rayon"] }
+ndarray-rand = "0.14"
+rand = "0.8"
+rand_distr = "0.4"
+
+# For loading MNIST dataset
+mnist = "0.17"
+
+# For progress bars
+indicatif = "0.17"
+
+# For logging
+log = "0.4"
+env_logger = "0.10"
+
+# For testing
+approx = "0.5"
+
+# Optional: For GPU acceleration
+candle-core = { version = "0.2", optional = true }
+
+[dev-dependencies]
+# For testing
+criterion = { version = "0.4", features = ["html_reports"] }
+
+[[bench]]
+name = "tensor_benchmarks"
+harness = false

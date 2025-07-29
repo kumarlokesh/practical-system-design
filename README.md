@@ -1,6 +1,6 @@
 # System Design Exercises
 
-A collection of system design exercises implemented in Go and Rust. Each exercise is a self-contained project demonstrating the design and implementation of various distributed systems concepts.
+A collection of system design exercises. Each exercise is a self-contained project demonstrating the design and implementation of various distributed systems concepts.
 
 ## Exercises
 
@@ -17,7 +17,13 @@ A collection of system design exercises implemented in Go and Rust. Each exercis
 
 ### Rust Exercises
 
-1. **[RocksDB Clone](exercises/rocksdb-clone/)** - A step-by-step implementation of a key-value store inspired by RocksDB, covering:
+1. **[LLM from Scratch](exercises/llm-from-scratch/)** - A step-by-step implementation of a language model from the ground up, covering:
+   - Neural network fundamentals
+   - Transformer architecture
+   - Training and inference optimization
+   - Tokenization and text generation
+
+2. **[RocksDB Clone](exercises/rocksdb-clone/)** - A step-by-step implementation of a key-value store inspired by RocksDB, covering:
    - LSM Tree Storage Engine
    - Write-Ahead Log with Crash Recovery
    - SSTable Implementation
@@ -26,7 +32,7 @@ A collection of system design exercises implemented in Go and Rust. Each exercis
    - Column Families
    - Merge Operators
 
-2. **[SIMD-POC](exercises/simd-poc/)** - A proof-of-concept demonstrating SIMD (Single Instruction, Multiple Data) optimizations in Rust, including:
+3. **[SIMD-POC](exercises/simd-poc/)** - A proof-of-concept demonstrating SIMD (Single Instruction, Multiple Data) optimizations in Rust, including:
    - Vectorized operations for performance-critical code paths
    - Cross-platform SIMD using Rust's portable_simd
    - Performance benchmarking and comparison with scalar implementations
