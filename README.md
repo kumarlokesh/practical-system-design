@@ -1,54 +1,102 @@
-# System Design Exercises
+# Practical System Design
 
-A collection of system design exercises. Each exercise is a self-contained project demonstrating the design and implementation of various distributed systems concepts.
+Bridging the gap between theory and practice in system design.
 
-## Exercises
+## Table of Contents
 
-### Go Exercises
+- [Practical System Design](#practical-system-design)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Go Projects](#go-projects)
+    - [AI Code Assistant](#ai-code-assistant)
+    - [Kafka Transactional Messaging](#kafka-transactional-messaging)
+    - [Write-Ahead Log](#write-ahead-log)
+    - [S3 Clone](#s3-clone)
+    - [Kubernetes Controller](#kubernetes-controller)
+    - [SQL Parser](#sql-parser)
+    - [Cassandra SSTable](#cassandra-sstable)
+    - [HNSW Vector Search](#hnsw-vector-search)
+  - [Rust Projects](#rust-projects)
+    - [LLM from Scratch](#llm-from-scratch)
+    - [RocksDB Clone](#rocksdb-clone)
+    - [SIMD POC](#simd-poc)
+  - [How to use](#how-to-use)
+  - [License](#license)
 
-1. **[AI Code Assistant](exercises/ai-code-assistant/)** - A system design exercise for building an AI-powered coding assistant.
-2. **[Kafka Transactional Messaging](exercises/kafka-transactional-messaging/)** - Implementation of reliable message processing using Kafka transactions.
-3. **[Write-Ahead Log (WAL)](exercises/wal/)** - A low-level implementation of a write-ahead log for data durability.
-4. **[S3 Clone](exercises/s3-clone/)** - A minimal implementation of an Amazon S3-compatible object storage service with support for buckets and objects.
-5. **[Kubernetes Custom Controller](exercises/k8s-controller/)** - A custom Kubernetes controller that manages Task resources to execute commands within the cluster.
-6. **[SQL Parser](exercises/sql-parser/)** - A simplified SQL parser implementation in Go, focusing on PostgreSQL's query processing internals.
-7. **[Cassandra SSTable](exercises/cassandra-sstable/)** - An implementation of a simplified version of Cassandra's SSTable storage format.
-8. **[HNSW Vector Search](exercises/hnsw-poc/)** - A high-performance implementation of the HNSW algorithm for approximate nearest neighbor search.
+## Overview
 
-### Rust Exercises
+Practical System Design is a collection of hands-on exercises and small subprojects that demonstrate core distributed systems and systems-programming concepts. Each exercise is a self-contained folder or repository with its own README and instructions.
 
-1. **[LLM from Scratch](exercises/llm-from-scratch/)** - A step-by-step implementation of a language model from the ground up, covering:
-   - Neural network fundamentals
-   - Transformer architecture
-   - Training and inference optimization
-   - Tokenization and text generation
+## Go Projects
 
-2. **[RocksDB Clone](exercises/rocksdb-clone/)** - A step-by-step implementation of a key-value store inspired by RocksDB, covering:
-   - LSM Tree Storage Engine
-   - Write-Ahead Log with Crash Recovery
-   - SSTable Implementation
-   - Compaction Strategies
-   - MVCC (Multi-Version Concurrency Control)
-   - Column Families
-   - Merge Operators
+### AI Code Assistant
 
-3. **[SIMD-POC](exercises/simd-poc/)** - A proof-of-concept demonstrating SIMD (Single Instruction, Multiple Data) optimizations in Rust, including:
-   - Vectorized operations for performance-critical code paths
-   - Cross-platform SIMD using Rust's portable_simd
-   - Performance benchmarking and comparison with scalar implementations
+An exercise demonstrating building an AI-powered coding assistant. [View code](./go/ai-code-assistant/)
 
-## Getting Started
+### Kafka Transactional Messaging
 
-### For Go Exercises
+Reliable message processing using Kafka transactions. [View code](./go/kafka-transactional-messaging/)
 
-1. Clone the repository
-2. Navigate to an exercise directory
-3. Run `go test ./...` to run tests
-4. Check the exercise's README for specific instructions
+### Write-Ahead Log
 
-### For Rust Exercises
+A low-level WAL implementation for durability and recovery. [View code](./go/wal/)
 
-1. Clone the repository
-2. Navigate to an exercise directory
-3. Run `cargo test` to run tests
-4. Check the exercise's README for specific instructions
+### S3 Clone
+
+A minimal S3-compatible object storage implementation. [View code](./go/s3-clone/)
+
+### Kubernetes Controller
+
+A controller that manages custom Task resources. [View code](./go/k8s-controller/)
+
+### SQL Parser
+
+A simplified SQL parser and related tooling. [View code](./go/sql-parser/)
+
+### Cassandra SSTable
+
+A simplified SSTable storage format implementation. [View code](./go/cassandra-sstable/)
+
+### HNSW Vector Search
+
+An HNSW approximate nearest-neighbor implementation. [View code](./go/hnsw-poc/)
+
+## Rust Projects
+
+### LLM from Scratch
+
+Step-by-step language model implementation and experiments. [View code](./rust/llm-from-scratch/)
+
+### RocksDB Clone
+
+A key-value store focused on LSM/compaction and SSTables. [View code](./rust/rocksdb-clone/)
+
+### SIMD POC
+
+Proofs-of-concept and benchmarks for SIMD optimizations. [View code](./rust/simd-poc/)
+
+## How to use
+
+Each subproject includes its own README with exact setup and run instructions. General quick-start:
+
+- For Go exercises: cd into the `go/<exercise>` folder and run:
+
+```bash
+# run tests for a Go exercise
+cd go/<exercise>
+go test ./...
+```
+
+- For Rust exercises: cd into the exercise folder and run:
+
+```bash
+# run tests for a Rust project
+cd <exercise-folder>
+cargo test
+```
+
+If a subproject requires external services (Kafka, Cassandra, etc.), check that subproject's README for local dev or Docker-compose instructions.
+
+## License
+
+This repository is available under the MIT License. See the `LICENSE` file at the repository root for details.
