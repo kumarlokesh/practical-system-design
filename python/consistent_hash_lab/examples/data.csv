@@ -1,0 +1,10 @@
+key,expected_node
+user_001,node1
+user_002,node2
+user_003,node3
+order_12345,node1
+order_12346,node3
+session_abc123,node2
+session_def456,node1
+cache_key_1,node3
+cache_key_2,node2

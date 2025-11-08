@@ -6,7 +6,6 @@ Bridging the gap between theory and practice in system design.
 
 - [Practical System Design](#practical-system-design)
   - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
   - [Go Projects](#go-projects)
     - [AI Code Assistant](#ai-code-assistant)
     - [Kafka Transactional Messaging](#kafka-transactional-messaging)
@@ -20,10 +19,10 @@ Bridging the gap between theory and practice in system design.
     - [LLM from Scratch](#llm-from-scratch)
     - [RocksDB Clone](#rocksdb-clone)
     - [SIMD POC](#simd-poc)
-  - [How to use](#how-to-use)
+  - [Python Projects](#python-projects)
+    - [Consistent Hashing Lab](#consistent-hashing-lab)
+  - [How to Use](#how-to-use)
   - [License](#license)
-
-## Overview
 
 Practical System Design is a collection of hands-on exercises and small subprojects that demonstrate core distributed systems and systems-programming concepts. Each exercise is a self-contained folder or repository with its own README and instructions.
 
@@ -75,27 +74,39 @@ A key-value store focused on LSM/compaction and SSTables. [View code](./rust/roc
 
 Proofs-of-concept and benchmarks for SIMD optimizations. [View code](./rust/simd-poc/)
 
-## How to use
+## Python Projects
+
+### Consistent Hashing Lab
+
+An implementation of consistent hashing with configurable virtual nodes and visualization. [View code](./python/consistent_hash_lab/)
+
+## How to Use
 
 Each subproject includes its own README with exact setup and run instructions. General quick-start:
 
-- For Go exercises: cd into the `go/<exercise>` folder and run:
+For Go projects:
 
 ```bash
-# run tests for a Go exercise
-cd go/<exercise>
+# run tests for a Go project
+cd go/<project>
 go test ./...
 ```
 
-- For Rust exercises: cd into the exercise folder and run:
+For Rust projects:
 
 ```bash
 # run tests for a Rust project
-cd <exercise-folder>
+cd rust/<project>
 cargo test
 ```
 
-If a subproject requires external services (Kafka, Cassandra, etc.), check that subproject's README for local dev or Docker-compose instructions.
+For Python projects:
+
+```bash
+# run tests for a Python project
+cd python/<project>
+python -m pytest
+```
 
 ## License
 
